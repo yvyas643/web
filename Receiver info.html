@@ -1,0 +1,50 @@
+<html><head>
+  <title>
+  </title>
+  <style>
+      #details{
+        padding: 15;
+        color: black;
+      }   
+      .receiver{
+        background-color: red;
+      } 
+      #abc{
+        border: black;
+
+      }
+  </style>
+</head></html>
+<section class="receiver">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form_holder">
+            <form action="receiver.php" method="post">
+              <label style="font-size: 25; color: black;">Blood Receiver Form</label>
+              <div>
+                <div id="details"><label>Enter Full Name</label><input id="abc" type="text" placeholder="Name" name="name" id="nameid" required>
+                </div>
+                  <div id="details"><label>Enter Contact Number</label><input id="abc" type="tel" placeholder="Phone Number" name="phone" required></div>
+              <div id="details"><label>Select Blood Group</label><select name="blood_type" required>
+                <option>Select Blood Group</option>
+                <option value="O+">O+</option>
+                <option value="A+">A+</option>
+                <option value="B+">B+</option>
+                <option value="AB+">AB+</option>
+                <option value="O-">O-</option>
+                <option value="A-">A-</option>
+                <option value="B-">B-</option>
+                <option value="AB-">AB-</option>
+              </select>
+            </div>
+              <div id="details"><label>Enter Address</label><textarea placeholder="Address" name="address"></textarea></div>
+              <div id="details"> <input type="submit" name="submit" value="Register"></div>
+              </div>
+              
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

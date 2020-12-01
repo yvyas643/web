@@ -1,0 +1,170 @@
+<html><head>
+  <title>
+  </title>
+  <style>
+      #details{
+        padding: 15;
+        color: black;
+      }   
+      .receiver{
+        padding: 10;
+        background-color: red;
+      } 
+      #abc{
+        border: black;
+        padding: 7;
+        
+      }
+      * {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: red;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 2}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+section.receiver{
+  border-style: double;
+}
+input#abc{
+  border-style: solid;
+}
+select#abc{
+  border-style: solid;
+}
+textarea#abc{
+  border-style: solid;
+}
+
+  </style>
+</head></html>
+<div class="slideshow-container">
+
+  <div class="mySlides fade">
+    <img src="2.jpg" style="width:100%;">
+  </div>
+  
+  <div class="mySlides fade">
+    <img src="1.jpg" style="width:100%;">
+  </div>
+  
+  <div class="mySlides fade">
+    <img src="3.jpg" style="width:100%;">
+  </div>
+  
+  </div>
+  <br>
+  
+  <div style="text-align:center">
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+  </div>
+  
+  <script>
+  var slideIndex = 0;
+  showSlides();
+  
+  function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 5000); // Change image every 2 seconds
+  }
+  </script>
+  
+<section class="receiver">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form_holder">
+            <form action="receiver.php" method="post">
+              <center><h2>Blood Donar Form </h2>
+              <div>
+                <div id="details"><label>Enter Full Name</label><input id="abc" type="text" placeholder="Name" name="name" id="nameid" required>
+                </div>
+                  <div id="details"><label>Enter Contact Number</label><input id="abc" type="tel" placeholder="Phone Number" name="phone" required></div>
+              <div id="details"><label>Select Blood Group</label><select id="abc" name="blood_type" required>
+                <option>Select Blood Group</option>
+                <option value="O+">O+</option>
+                <option value="A+">A+</option>
+                <option value="B+">B+</option>
+                <option value="AB+">AB+</option>
+                <option value="O-">O-</option>
+                <option value="A-">A-</option>
+                <option value="B-">B-</option>
+                <option value="AB-">AB-</option>
+              </select>
+            </div>
+              <div id="details"><label>Enter Address</label><textarea id="abc" placeholder="Address" name="address"></textarea></div>
+              <div id="details"> <input id="abc" type="submit" name="submit" value="Register"></div>
+              </div>
+              
+            </form>
+          </div>
+        </div>
+      </div>
+    </div></center>
+  </section>
